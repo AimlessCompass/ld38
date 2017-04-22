@@ -36,7 +36,7 @@ public class WorldController : MonoBehaviour {
         directionVector = new Vector3(-directionVector.z, 0, directionVector.x);
         transform.Rotate(directionVector.normalized, angleToTurn * rotationMultiplier);
         lastpos = newPos;
-        Debug.Log("Direction Vector: " + directionVector.normalized + " Angle: " + angleToTurn * rotationMultiplier);
+        //Debug.Log("Direction Vector: " + directionVector.normalized + " Angle: " + angleToTurn * rotationMultiplier);
 	}
 
     private void FixedUpdate()
