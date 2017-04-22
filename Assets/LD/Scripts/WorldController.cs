@@ -5,6 +5,7 @@ using UnityEngine;
 public class WorldController : MonoBehaviour {
     public Transform playerEyes;
     public float worldRadius = 25f;
+    public float rotationMultiplier = 5;
 
     private bool keyheld = false;
     private Transform world;
@@ -33,9 +34,9 @@ public class WorldController : MonoBehaviour {
         float angleToTurn = distanceTravelled * 180 / (Mathf.PI * worldRadius);
         Vector3 directionVector = (newPos - lastpos);
         directionVector = new Vector3(-directionVector.z, 0, directionVector.x);
-        transform.Rotate(directionVector.normalized, angleToTurn * 10);
+        transform.Rotate(directionVector.normalized, angleToTurn * rotationMultiplier);
         lastpos = newPos;
-        Debug.Log("Direction Vector: " + directionVector.normalized + " Angle: " + angleToTurn * 10);
+        Debug.Log("Direction Vector: " + directionVector.normalized + " Angle: " + angleToTurn * rotationMultiplier);
 	}
 
     private void FixedUpdate()
