@@ -6,6 +6,9 @@ TagManager:
   tags:
   - FxTemporaire
   - projectile
+  - Controller
+  - ControllerGrabbed
+  - Key
   layers:
   - Default
   - TransparentFX
