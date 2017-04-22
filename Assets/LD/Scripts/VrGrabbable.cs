@@ -34,7 +34,7 @@ public class VrGrabbable : MonoBehaviour {
     {
         if (other.CompareTag("Controller") && controller == null)
         {
-            Debug.Log("Attached");
+            //Debug.Log("Attached");
             controller = other.transform;
             controller.tag = "ControllerGrabbed";
             joint.connectedBody = controller.GetComponent<Rigidbody>();
