@@ -1,35 +1,15 @@
 fileFormatVersion: 2
-guid: 4a55de0da523f324a8c7a768cfba02a3
-timeCreated: 1492918173
+guid: 766291cba89296e4c9b988262edf7355
+timeCreated: 1492939761
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Cube
-    100004: Empty
-    100006: Door
-    100008: Nothing
     400000: //RootNode
-    400002: Cube
-    400004: Empty
-    400006: Door
-    400008: Nothing
     2300000: //RootNode
-    2300002: Cube
-    2300004: Door
-    2300006: Nothing
     3300000: //RootNode
-    3300002: Cube
-    3300004: Door
-    3300006: Nothing
-    4300000: Cube
-    4300002: Door
-    4300004: Nothing
-    6400000: //RootNode
-    6400002: Cube
-    6400004: Door
-    6400006: Nothing
+    4300000: Wall
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -60,10 +40,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
@@ -77,7 +57,7 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
@@ -96,7 +76,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
