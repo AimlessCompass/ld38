@@ -33,7 +33,6 @@ public class ReaderController : MonoBehaviour {
         if (other.CompareTag("Key"))
         {
             openDoor = true;
-            other.transform.GetComponent<VrGrabbable>().destory();
         }
     }
 }

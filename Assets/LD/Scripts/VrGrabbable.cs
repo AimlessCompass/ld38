@@ -16,60 +16,78 @@ public class VrGrabbable : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-        joint = transform.parent.GetComponent<FixedJoint>();
-        if (joint == null)
-        {
-            Debug.Log("Joint not found!");
-        }
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (controller)
+        SteamVR_Controller.Device dev = getDeviceWithButtonDown(Valve.VR.EVRButtonId.k_EButton_Grip);
+        if (dev != null) 
         {
-            if (device.GetPressDown(Valve.VR.EVRButtonId.k_EButton_Grip))
+            GameObject hand = getHand(dev).gameObject;
+            if (!joint && GetComponent<Collider>()) 
             {
-                //Debug.Log("Drop");
-                drop();
+                Vector3 closestPoint = GetComponent<Collider>().ClosestPoint(hand.gameObject.transform.position);
+                if ((closestPoint - hand.transform.position).magnitude <= 0.05f)
+                    pickup(hand);
+            }
+        } else {
+            dev = getDeviceWithButtonUp(Valve.VR.EVRButtonId.k_EButton_Grip);
+            if (dev != null && joint) {
+                drop(dev);
             }
         }
-	}
-
-    public void destory()
-    {
-        if (controller)
-        {
-            controller.tag = "Controller";
-        }
-        Destroy(transform.parent.gameObject);
     }
 
-    public void drop()
+    private SteamVR_TrackedObject getHand (SteamVR_Controller.Device dev) 
     {
-        if (controller)
-        {
-            controller.tag = "Controller";
-            joint.connectedBody = null;
-            StartCoroutine("delayDrop");
-        }
+        if (dev == controllerman.rightDevice)
+            return controllerman.rightHand;
+        else if (dev == controllerman.leftDevice)
+            return controllerman.leftHand;
+        return null;
     }
 
-    private IEnumerator delayDrop()
+    private SteamVR_Controller.Device getDeviceWithButtonUp (Valve.VR.EVRButtonId bId) 
     {
-        //Debug.Log("Wait");
-        yield return new WaitForSeconds(0.5f);
-        //Debug.Log("Detach");
-        controller = null;
-        yield return null;
+        if (controllerman.rightDevice.GetPressUp(bId))
+            return controllerman.rightDevice;
+        else if (controllerman.leftDevice.GetPressUp(bId))
+            return controllerman.leftDevice;
+        return null;
     }
-    private void OnTriggerEnter(Collider other)
+
+    private SteamVR_Controller.Device getDeviceWithButtonDown (Valve.VR.EVRButtonId bId) 
     {
-        if (other.CompareTag("Controller") && controller == null)
+        if (controllerman.rightDevice.GetPressDown(bId))
+            return controllerman.rightDevice;
+        else if (controllerman.leftDevice.GetPressDown(bId))
+            return controllerman.leftDevice;
+        return null;
+    }
+
+    public void pickup (GameObject ctr) {
+        if (ctr.gameObject.CompareTag("Controller") && controller == null) 
         {
             //Debug.Log("Attached");
-            controller = other.transform;
+            controller = ctr.transform;
             controller.tag = "ControllerGrabbed";
+            joint = gameObject.AddComponent<FixedJoint>();
             joint.connectedBody = controller.GetComponent<Rigidbody>();
+        }
+    }
+
+    public void drop(SteamVR_Controller.Device dev)
+    {
+        if (controller)
+        {
+            controller.tag = "Controller";
+            Object.Destroy(joint);
+            joint = null;
+            Rigidbody rb = GetComponent<Rigidbody>();
+            rb.angularVelocity = dev.angularVelocity;
+            rb.velocity = dev.velocity;
+            controller = null;
         }
     }
 }
