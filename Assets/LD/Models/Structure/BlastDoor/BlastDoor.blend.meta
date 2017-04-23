@@ -13,8 +13,10 @@ ModelImporter:
     400004: Wall
     2300000: BlastDoor
     2300002: Wall
+    2300004: //RootNode
     3300000: BlastDoor
     3300002: Wall
+    3300004: //RootNode
     4300000: Wall
     4300002: BlastDoor
     7400000: Default Take
