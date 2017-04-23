@@ -1,0 +1,211 @@
+fileFormatVersion: 2
+guid: d277da6e8b5a39b49a8dc688f780730c
+timeCreated: 1492914677
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: 120
+    100004: Roof
+    100006: 119
+    100008: Cube
+    100010: Cube_001
+    100012: Top_Stairs
+    100014: 120_001
+    100016: 120_002
+    100018: 117
+    100020: 120_003
+    100022: 118
+    100024: 117_001
+    100026: 120_004
+    100028: 120_005
+    100030: 120_006
+    100032: Elevator_East
+    100034: Elevator_West
+    100036: 116
+    100038: 115
+    100040: Cylinder
+    100042: Plane
+    400000: //RootNode
+    400002: 120
+    400004: Roof
+    400006: 119
+    400008: Cube
+    400010: Cube_001
+    400012: Top_Stairs
+    400014: 120_001
+    400016: 120_002
+    400018: 117
+    400020: 120_003
+    400022: 118
+    400024: 117_001
+    400026: 120_004
+    400028: 120_005
+    400030: 120_006
+    400032: Elevator_East
+    400034: Elevator_West
+    400036: 116
+    400038: 115
+    400040: Cylinder
+    400042: Plane
+    2300000: //RootNode
+    2300002: 120
+    2300004: Roof
+    2300006: 119
+    2300008: Cube
+    2300010: Cube_001
+    2300012: Top_Stairs
+    2300014: 120_001
+    2300016: 120_002
+    2300018: 117
+    2300020: 120_003
+    2300022: 118
+    2300024: 117_001
+    2300026: 120_004
+    2300028: 120_005
+    2300030: 120_006
+    2300032: Elevator_East
+    2300034: Elevator_West
+    2300036: 116
+    2300038: 115
+    2300040: Cylinder
+    2300042: Plane
+    3300000: //RootNode
+    3300002: 120
+    3300004: Roof
+    3300006: 119
+    3300008: Cube
+    3300010: Cube_001
+    3300012: Top_Stairs
+    3300014: 120_001
+    3300016: 120_002
+    3300018: 117
+    3300020: 120_003
+    3300022: 118
+    3300024: 117_001
+    3300026: 120_004
+    3300028: 120_005
+    3300030: 120_006
+    3300032: Elevator_East
+    3300034: Elevator_West
+    3300036: 116
+    3300038: 115
+    3300040: Cylinder
+    3300042: Plane
+    4300000: Skyscraper
+    4300002: 120
+    4300004: Roof
+    4300006: 119
+    4300008: Cube_001
+    4300010: Cube
+    4300012: Top_Stairs
+    4300014: 120_001
+    4300016: 120_002
+    4300018: 120_003
+    4300020: 117
+    4300022: 118
+    4300024: 120_004
+    4300026: 117_001
+    4300028: 120_006
+    4300030: 120_005
+    4300032: Elevator_West
+    4300034: Elevator_East
+    4300036: 116
+    4300038: 115
+    4300040: Cylinder
+    4300042: Plane
+    6400000: //RootNode
+    6400002: 120
+    6400004: Roof
+    6400006: 119
+    6400008: Cube
+    6400010: Cube_001
+    6400012: Top_Stairs
+    6400014: 120_001
+    6400016: 120_002
+    6400018: 117
+    6400020: 120_003
+    6400022: 118
+    6400024: 117_001
+    6400026: 120_004
+    6400028: 120_005
+    6400030: 120_006
+    6400032: Elevator_East
+    6400034: Elevator_West
+    6400036: 116
+    6400038: 115
+    6400040: Cylinder
+    6400042: Plane
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
